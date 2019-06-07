@@ -1,0 +1,9 @@
+{
+  "modules": { 
+    "jarvis": {
+      "description": "Jarvis inspiré des films Iron Man.",
+      "autheur": "Mathieu BROILLET",
+      "version": "1.0"
+    }
+  }
+}

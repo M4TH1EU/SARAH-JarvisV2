@@ -1,0 +1,228 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulejarvis" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulejarvis" scope="public">
+
+  <example>Jarvis tu es la?</example>
+  <tag>out.action=new Object();</tag>
+
+	<item weight="2">Jarvis</item>
+    <one-of>
+	
+		<!-- ARE YOU HERE ? -->
+		<item>tu es la<tag>out.action.val="la"</tag></item>
+
+
+
+		<!-- DATE & HEURE -->
+		<item>il est quelle heure<tag>out.action.val="time"</tag></item>
+		<item>c'est quel heure<tag>out.action.val="time"</tag></item>
+ 		<item>quelle heure est il<tag>out.action.val="time"</tag></item>
+		<item>peux tu me donner l'heure<tag>out.action.val="time"</tag></item>
+		<item>tu peux me donner l'heure<tag>out.action.val="time"</tag></item>
+
+		<item>Quelle date sommes-nous<tag>out.action.val="date"</tag></item>
+		<item>Quel jour sommes-nous<tag>out.action.val="date"</tag></item>	  
+		<item>Quelle est la date<tag>out.action.val="date"</tag></item>
+		<item>Quelle est la date d'aujourd'hui<tag>out.action.val="date"</tag></item>
+		<item>Quelle date aujourd'hui<tag>out.action.val="date"</tag></item>
+		<item>On est quand<tag>out.action.val="date"</tag></item>
+		<item>On est quel jour<tag>out.action.val="date"</tag></item>	  
+		<item>Donne moi la date<tag>out.action.val="date"</tag></item>
+		<item>Donne moi la date d'aujourd'hui<tag>out.action.val="date"</tag></item>
+		<item>Je ne sais plus quel jour on est<tag>out.action.val="date"</tag></item>	  
+		<item>Je ne sais plus quelle date on est<tag>out.action.val="date"</tag></item>	 
+
+
+
+		<!-- AFFICHAGE ECRAN -->
+
+		<item>affiche ton interface<tag>out.action.val="program_run_jarvis"</tag></item>
+		<item>active ton interface<tag>out.action.val="program_run_jarvis"</tag></item>
+		<item>lance ton interface<tag>out.action.val="program_run_jarvis"</tag></item>
+		<item>ouvre ton interface<tag>out.action.val="program_run_jarvis"</tag></item>
+		<item>masque ton interface<tag>out.action.val="program_close_jarvis"</tag></item>
+		<item>ferme ton interface<tag>out.action.val="program_close_jarvis"</tag></item>
+		<item>désactive ton interface<tag>out.action.val="program_close_jarvis"</tag></item>
+
+ 	 	<item>affiche le bureau<tag>out.action.val="action_minimize"</tag></item>
+ 		<item>va sur le bureau<tag>out.action.val="action_minimize"</tag></item>
+		<item>restore<tag>out.action.val="action_restore"</tag></item>
+		<item>réaffiche les fenêtres<tag>out.action.val="action_restore"</tag></item>
+		<item>affiche les fenetres<tag>out.action.val="action_restore"</tag></item>
+		<item>remet les fenetres<tag>out.action.val="action_restore"</tag></item>
+
+
+
+		<!-- PAGE INTERNET -->
+		<item>actualise<tag>out.action.val="action_f5"</tag></item>
+		<item>raffraichis<tag>out.action.val="action_f5"</tag></item>
+		<item>met a jour<tag>out.action.val="action_f5"</tag></item>
+		<item>relance<tag>out.action.val="action_f5"</tag></item>
+
+		<item>lance ta page de conf<tag>out.action.val="url_home"</tag></item>
+		<item>affiche le panel<tag>out.action.val="url_home"</tag></item>
+		<item>ouvre le panel<tag>out.action.val="url_home"</tag></item>
+		<item>fait voir ton panel<tag>out.action.val="url_home"</tag></item>
+
+		<item>affiche le store<tag>out.action.val="url_store"</tag></item>
+		<item>fait voir le store<tag>out.action.val="url_store"</tag></item>
+
+		<item>affiche la boxe<tag>out.action.val="url_box"</tag></item>
+		<item>fait voir la boxe<tag>out.action.val="url_box"</tag></item>
+	  
+		<item>ferme l'onglet<tag>out.action.val="action_f4"</tag></item>
+
+		<item>va sur fèillsbouque<tag>out.action.val="url_facebook"</tag></item>
+		<item>va sur youtube<tag>out.action.val="url_youtube"</tag></item>
+
+
+
+		<!-- DOSSIERS & EXPLORATEUR -->
+
+		<item>affiche les pluguine<tag>out.action.val="explorer_plugins"</tag></item>
+		<item>fait voir les pluguine<tag>out.action.val="explorer_plugins"</tag></item>
+		<item>affiche tes pluguine<tag>outaction.val="explorer_plugins"</tag></item>
+		<item>fait  voir tes pluguine<tag>out.action.val="explorer_plugins"</tag></item>
+
+		<item>fait voir ton dossier<tag>out.action.val="explorer_jarvis"</tag></item>
+		<item>affiche ton dossier<tag>out.action.val="explorer_jarvis"</tag></item>
+
+		<item>affiche mes images<tag>out.action.val="explorer_images"</tag></item>
+		<item>fait voir mes images<tag>out.action.val="explorer_images"</tag></item>
+		<item>affiche les images<tag>out.action.val="explorer_images"</tag></item>
+		<item>fait  voir images<tag>out.action.val="explorer_images"</tag></item>
+		<item>fais voir les images<tag>out.action.val="explorer_images"</tag></item>
+		<item>fais voir mes images<tag>out.action.val="explorer_images"</tag></item>
+
+		<item>affiche mes documents<tag>out.action.val="explorer_documents"</tag></item>
+		<item>affiche les documents<tag>out.action.val="explorer_documents"</tag></item>
+
+		<item>affiche les téléchargements<tag>out.action.val="explorer_dl"</tag></item>
+		<item>affiche les torrent<tag>out.action.val="explorer_dl"</tag></item>
+		<item>fais voir les torraint<tag>out.action.val="explorer_dl"</tag></item>
+
+		<item>affiche les disk<tag>out.action.val="explorer_disks"</tag></item>
+		<item>fais voir les disk<tag>out.action.val="explorer_disks"</tag></item>
+
+
+		<!-- LANCEMENT & FERMETURE DE LOGICIELS -->
+
+		<item>lance failleurfox<tag>out.action.val="program_run_firefox"</tag></item>
+		<item>ouvre failleurfox<tag>out.action.val="program_run_firefox"</tag></item>
+		<item>ferme failleurfox<tag>out.action.val="program_close_firefox"</tag></item>
+	  
+		<item>lance sublimetexte<tag>out.action.val="program_run_sublimetext"</tag></item>
+		<item>lance sublime texte<tag>out.action.val="program_run_sublimetext"</tag></item>
+		<item>lance sublimtext<tag>out.action.val="program_run_sublimetext"</tag></item>
+		<item>lance l'editeur<tag>out.action.val="program_run_sublimetext"</tag></item>
+		<item>ferme sublime text<tag>out.action.val="program_close_sublimetext"</tag></item>
+		<item>ferme sublim text<tag>out.action.val="program_close_sublimetext"</tag></item>
+		<item>ferme l'editeur<tag>out.action.val="program_close_sublimetext"</tag></item>
+
+	  
+		<item>lance discorde<tag>out.action.val="program_run_discord"</tag></item>
+		<item>ouvre discorde<tag>out.action.val="program_run_discord"</tag></item>
+		<item>ouvre discorde<tag>out.action.val="program_run_discord"</tag></item>
+		<item>ferme discorde<tag>out.action.val="program_close_discord"</tag></item>
+		<item>ferme discord<tag>out.action.val="program_close_discord"</tag></item>
+
+
+
+		<!-- ACTIONS -->
+
+		<item>précédent<tag>out.action.val="action_precedent"</tag></item>
+		<item>suivant<tag>out.action.val="action_next"</tag></item>
+		<item>valider<tag>out.action.val="action_enter"</tag></item>
+		<item>entrer<tag>out.action.val="action_enter"</tag></item>
+		<item>sauvegarde<tag>out.action.val="action_save"</tag></item>
+		<item>fenêtre suivante<tag>out.action.val="action_tab"</tag></item>
+		<item>ferme la fenêtre<tag>out.action.val="action_close_window"</tag></item>
+
+		<item>ferme tout<tag>out.action.val="system_quit_all"</tag></item>
+
+	
+		<item>1 plus 1<tag>out.action.val="action_enter"</tag></item>
+	  
+	
+		<!-- GESTION DU PC --> 
+
+		<item>éteind le PC<tag>out.action.val="pc_shutdown"</tag></item>
+		<item>éteind l'PC<tag>out.action.val="pc_shutdown"</tag></item>
+		<item>éteind l'ordinateur<tag>out.action.val="pc_shutdown"</tag></item>
+		<item>arrête le PC<tag>out.action.val="pc_shutdown"</tag></item>
+		<item>arrête l'ordinateur<tag>out.action.val="pc_shutdown"</tag></item>
+	  
+		<item>redémarre le PC<tag>out.action.val="pc_restart"</tag></item>
+		<item>redémarre l'ordinateur<tag>out.action.val="pc_restart"</tag></item> 
+
+		<item>coupe le son<tag>out.action.val="pc_mute"</tag></item>
+		<item>silence radio<tag>out.action.val="pc_mute"</tag></item>
+		<item>désactive le son<tag>out.action.val="pc_mute"</tag></item>
+		<item>muet<tag>out.action.val="pc_mute"</tag></item>
+		<item>tais toi<tag>out.action.val="pc_mute"</tag></item>
+
+		<item>remet le son<tag>out.action.val="pc_unmute"</tag></item>
+		<item>ré-active le son<tag>out.action.val="pc_unmute"</tag></item>
+
+		<item>cache le bureau<tag>out.action.val="pc_desktop_hide"</tag></item>
+		<item>masque le bureau<tag>out.action.val="pc_desktop_hide"</tag></item>
+		<item>désactive le bureau<tag>out.action.val="pc_desktop_hide"</tag></item>
+
+		<item>remet le bureau<tag>out.action.val="pc_desktop_show"</tag></item>
+		<item>ré-active le bureau<tag>out.action.val="pc_desktop_show"</tag></item>
+		<item>active le bureau<tag>out.action.val="pc_desktop_show"</tag></item>
+
+		<item>mets le pc en veille<tag>out.action.val="pc_veille"</tag></item>
+		<item>mets l'ordinateur en veille<tag>out.action.val="pc_veille"</tag></item>
+		<item>active le mode veille<tag>out.action.val="pc_veille"</tag></item>
+
+
+
+		<!-- GESTION DE JARVIS-->
+
+		<item>relance le systaime<tag>out.action.val="jarvis_reboot"</tag><tag>out.action._attributes.tts = "je relance mon système"</tag></item>
+		<item>relance ton systaime<tag>out.action.val="jarvis_reboot"</tag><tag>out.action._attributes.tts = "je relance mon système"</tag></item>
+		<item>redémar le systaime<tag>out.action.val="jarvis_reboot"</tag><tag>out.action._attributes.tts = "je relance mon système"</tag></item>
+		<item>redémar ton systaime<tag>out.action.val="jarvis_reboot"</tag><tag>out.action._attributes.tts = "je relance mon système"</tag></item>
+	 
+
+
+
+		<!-- GESTION DES PÉRIPHÉRIQUES -->
+	 
+		<item>réveilles toi<tag>out.action.val="action_enter"</tag></item>
+		<item>reviens<tag>out.action.val="action_enter"</tag></item>
+		<item>éteinds l'écran<tag>out.action.val="system_screen_off"</tag></item>
+		<item>allume l'écran<tag>out.action.val="system_screen_on"</tag></item>
+		<item>ouvre le Dévédé<tag>out.action.val="system_dvd_on"</tag></item>
+		<item>ferme le Dévédé<tag>out.action.val="system_dvd_off"</tag></item>
+		<item>ouvre le lecteur<tag>out.action.val="system_dvd_on"</tag></item>
+		<item>ferme le lecteur<tag>out.action.val="system_dvd_off"</tag></item>
+
+
+
+		<!-- DISCUTIONS -->
+
+    <item>ça va<tag>out.action.val="humeur"</tag></item>
+    <item>comment tu vas<tag>out.action.val="humeur"</tag></item>
+    <item>comment vas tu<tag>out.action.val="humeur"</tag></item>
+    <item>tu va bien<tag>out.action.val="humeur"</tag></item>
+    <item>comment ça va<tag>out.action.val="humeur"</tag></item>
+    <item>la forme<tag>out.action.val="humeur"</tag></item>
+
+
+		<item>dis bonjour a cynthia<tag>out.action.val="dis_bonjour_a_cynthia"</tag></item>
+    <item>dis bonjour a patrick<tag>out.action.val="dis_bonjour_a_patrick"</tag></item>
+
+
+		<!-- MICRO & CO
+
+		<item>passe sur le casque<tag>out.action.val="switch"</tag></item>
+		<item>passe sur le casque<tag>out.action.val="switch"</tag></item>
+		<item>change la sortie audio<tag>out.action.val="switch"</tag></item>
+		<item>ajuste le micro<tag>out.action.val="microadjust"</tag></item>-->
+
+    </one-of>
+
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/jarvis";</tag>
+  </rule> 
+</grammar>
